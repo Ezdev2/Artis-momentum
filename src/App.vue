@@ -6,10 +6,10 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const route = useRouter();
 
-const showScrollButton = ref(false);
+const isScrolling = ref(false);
 
 const checkScroll = () => {
-  showScrollButton.value = window.scrollY > 300;
+  isScrolling.value = window.scrollY > 600;
 };
 
 const scrollToTop = () => {
@@ -29,13 +29,13 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col overflow-hidden">
+  <div class="flex flex-col items-ceter w-full overflow-hidden">
     <Navbar
-      class="fixed w-full"
+      class="fixed"
     />
     <router-view class="mt-[86px]" v-slot="{ Component }">
       <transition appear name="fade-page" mode="out-in">
-        <component class="bodypage" :is="Component" />
+        <component class="bodypage w-full" :is="Component" />
       </transition>
     </router-view>
     <Footer
@@ -43,7 +43,7 @@ onUnmounted(() => {
     />
 
     <button 
-      v-show="showScrollButton" 
+      v-show="isScrolling" 
       @click="scrollToTop" 
       class="scroll-to-top-btn"
       aria-label="Scroll to top"

@@ -10,10 +10,10 @@
   --color-primary: #3a3a3a;
   --color-secondary: #ffbe57;
   --color-black: #272d4e;
-  --color-blackScale: #333333;
+  --color-blackScale: #3a3a3a;
   --color-bgBlack: #191617;
   --color-bgFooter: #1d1d1d;
-  --color-gray: #808192;
+  --color-gray: #b4b4b9;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -55,5 +55,14 @@ button:focus {
 }
 
 h1 {
-  font-size: 5rem;
+  @apply text-[3rem] lg:text-[4rem] xl:text-[5rem];
+}
+h2 {
+  @apply text-[1.5rem] lg:text-[2rem] xl:text-[3rem];
+}
+h3 {
+  @apply text-[1.3rem] lg:text-[1.6rem];
+}
+h4 {
+  @apply text-[1rem] xl:text-[1.2rem];
 }
