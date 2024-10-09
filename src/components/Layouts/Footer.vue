@@ -14,19 +14,26 @@ onMounted(() => {
 <template>
     <div class="footer">
         <div class="flex flex-col gap-[24px]">
-            <p>© Copyright {{ currentYear }}</p>
+            <p class="text-left">© Copyright {{ currentYear }}</p>
+            <p class="footer__title">ARTIS MOMENTUM</p>
         </div>
         <div class="flex flex-col items-start gap-[24px]">
             <p class="footer__title">Menu</p>
-            <a href="#">Accueil</a>
-            <a href="#">Tableau</a>
-            <a href="#">Se connecter</a>
+            <a href="/">Accueil</a>
+            <a href="/#formation">Formation</a>
+            <a href="/#service">Services</a>
         </div>
         <div class="flex flex-col items-start gap-[24px]">
             <p class="footer__title">Payement</p>
+            <a href="#">Stripe</a>
+            <a href="#">Physique</a>
+            <a href="#">Mode de payement</a>
         </div>
         <div class="flex flex-col items-start gap-[24px]">
             <p class="footer__title">Nous contacter</p>
+            <a href="#">Téléphone: 020 000 000</a>
+            <a href="#">Email:  test@gmail.com</a>
+            <a href="#">Adresse: Rue 201, Ankatso</a>
         </div>
     </div>
 </template>
