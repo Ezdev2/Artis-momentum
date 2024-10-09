@@ -10,10 +10,6 @@ onMounted(() => {
     isVisible.value = false;
 });
 
-const handleClick = (route) => {
-    router.push(route);
-};
-
 const isVisible = ref(false);
 
 const checkFocusedLink = (link) => {
@@ -39,37 +35,37 @@ onUnmounted(() => {
 <template>
     <div class="navbar w-full">
         <div
-            :class="['flex flex-row items-center justify-between', isScrolling ? 'nav-scrolling bg-white my-[16px] mx-[24px] px-8 py-1.5 rounded-[18px]' : 'bg-secondary lg:px-[122px] px-[24px] py-4 w-full']">
+            :class="['flex flex-row items-center justify-between', isScrolling ? 'nav-scrolling bg-white my-[16px] mx-[24px] pl-8 pr-2 py-1.5 rounded-[18px]' : 'bg-secondary lg:px-[122px] px-[24px] py-4 w-full']">
             <div>
                 <a href="/" class="font-[800] text-[#3a3a3a]">
                     ARTIS MOMENTUM
                 </a>
             </div>
             <div class="xl:flex flex-row items-center gap-[34px] justify-center hidden text-[#3a3a3a]">
-                <div :class="'cursor-pointer' + !checkFocusedLink('/') ? 'nav-list' : 'text-primary'
-                    " @click="handleClick('/')">
+                <a href="/" :class="'cursor-pointer' + !checkFocusedLink('/') ? 'nav-list' : 'text-primary'
+                    ">
                     Accueil
-                </div>
-                <div :class="'cursor-pointer' + !checkFocusedLink('/') ? 'nav-list' : 'text-primary'
-                    " @click="handleClick('/')">
+                </a>
+                <a href="/#service" :class="'cursor-pointer' + !checkFocusedLink('/') ? 'nav-list' : 'text-primary'
+                    ">
                     Nos services
-                </div>
-                <div :class="'cursor-pointer' + !checkFocusedLink('/')
+                </a>
+                <a href="/#formation" :class="'cursor-pointer' + !checkFocusedLink('/')
                     ? 'nav-list'
                     : 'text-primary'
-                    " @click="handleClick('/')">
+                    ">
                     Formations
-                </div>
-                <div :class="'cursor-pointer' + !checkFocusedLink('/')
+                </a>
+                <a href="/#ressource" :class="'cursor-pointer' + !checkFocusedLink('/')
                     ? 'nav-list'
                     : 'text-primary'
-                    " @click="handleClick('/')">
+                    ">
                     Ressources
-                </div>
-                <div :class="'cursor-pointer' + !checkFocusedLink('/') ? 'nav-list' : 'text-primary'
-                    " @click="handleClick('/')">
+                </a>
+                <a href="/#about" :class="'cursor-pointer' + !checkFocusedLink('/') ? 'nav-list' : 'text-primary'
+                    ">
                     Qui sommes-nous
-                </div>
+                </a>
             </div>
             <div class="flex flex-row items-center justify-end">
                 <button :class="['flex flex-row items-center gap-3 bg-transparent min-w-[fit-content]', isScrolling ? 'px-4 py-1.5 rounded-[12px]' : '' ]" @click="logIn">

@@ -20,7 +20,7 @@
         <div class="flex flex-col gap-4 lg:w-2/3">
             <div class="flex gap-8 justify-between items-center bg-white rounded-lg p-6 transition-all border border-gray hover:border-secondary hover:border-2 hover:bg-gray-700 hover:shadow-lg"
                 v-for="(item, index) in data" :key="index">
-                <div class="flex gap-2">
+                <div class="flex items-center gap-4">
                     <div class="min-w-[160px] h-[160px] bg-blackScale overflow-hidden rounded-[16px]"
                         :style="{ backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }">
                     </div>

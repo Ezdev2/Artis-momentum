@@ -14,19 +14,15 @@
         <div class="overflow-hidden relative w-full">
             <div class="slide-track">
                 <div class="w-[300px] mx-[10px] flex justify-center" v-for="n in 14" :key="n">
-                    <div class="card bg-white rounded-[10px] py-[12px] px-[20px] flex items-center h-[100%]">
-                        <div class="w-full h-[120px] flex items-center justify-center">
+                    <div @click="goTo('/')" class="card min-w-[300px] bg-white rounded-[10px] p-[20px] flex items-start gap-4 h-[100%]">
+                        <div class="w-[100px] flex items-center justify-center">
                             <img width="84" :src="getImageSrc(n)" alt="" />
                         </div>
-                        <div class="flex py-[20px] text-center">
+                        <div class="flex items-center gap-4">
                             <div class="flex flex-col gap-2 items-start">
                                 <h4 class="font-bold text-left ">{{ getCardTitle(n) }}</h4>
                                 <p class="text-left font-thin">{{ getCardDescription(n) }}</p>
                             </div>
-                            <a href="#" class="card-button">
-                                <img src="../../../assets/arrow-black.svg" alt="">
-                            </a>
-
                         </div>
                     </div>
                 </div>
@@ -62,6 +58,10 @@ const getCardTitle = (index) => {
 const getCardDescription = (index) => {
     return cards[(index - 1) % cards.length].description;
 };
+
+function goTo(link) {
+    console.log(link);
+}
 </script>
 
 <style lang="scss" scoped>
@@ -88,22 +88,10 @@ const getCardDescription = (index) => {
 
 .card:hover {
     transform: scale(1.05);
-}
-
-.card-button {
-    display: inline-block;
-    padding: 10px 20px;
-    // background-color: var(--color-secondary);
-    // color: var(--color-primary);
-    // text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: background-color 0.3s;
+    background-color: var(--color-secondary);
 }
 
 .card-button:hover {
-    // background-color: var(--color-primary);
     border: 1px solid var(--color-primary);
-    // color: var(--color-secondary);
 }
 </style>

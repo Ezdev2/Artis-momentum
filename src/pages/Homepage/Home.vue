@@ -30,10 +30,10 @@
   </div>
 
   <!-- Sections -->
-  <Services data-aos="fade-right" data-aos-delay="500"></Services>
-  <Formations data-aos="fade-left" data-aos-delay="500"></Formations>
-  <About data-aos="fade-right" data-aos-delay="500"></About>
-  <Ressources data-aos="fade-left" data-aos-delay="500"></Ressources>
+  <Services id="service" data-aos="fade-right" data-aos-delay="500"></Services>
+  <Formations id="formation" data-aos="fade-left" data-aos-delay="500"></Formations>
+  <About id="about" data-aos="fade-right" data-aos-delay="500"></About>
+  <Ressources id="ressource" data-aos="fade-left" data-aos-delay="500"></Ressources>
 
 </template>
 
