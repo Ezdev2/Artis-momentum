@@ -12,7 +12,7 @@
             </p>
             <button
                 class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-blackScale bg-secondary hover:bg-secondary w-1/2"
-                @click="goTo(item.link)">
+                @click="goTo('/formation')">
                 <span>Tout voir</span>
                 <img width="12" src="../../../assets/arrow-black.svg" alt="">
             </button>
@@ -40,6 +40,9 @@
 </template>
 
 <script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const data = [
     {
@@ -69,7 +72,7 @@ const data = [
 ]
 
 function goTo(link) {
-    console.log(link);
+    router.push(link)
 }
 </script>
 
