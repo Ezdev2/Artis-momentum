@@ -40,7 +40,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .footer {
-    @apply bg-transparent w-full;
+    @apply bg-transparent w-full text-white;
     display: flex;
     flex-wrap: wrap;
     padding: 80px 194px;

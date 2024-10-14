@@ -35,13 +35,13 @@ onUnmounted(() => {
 <template>
     <div class="navbar w-full">
         <div
-            :class="['flex flex-row items-center justify-between', isScrolling ? 'nav-scrolling bg-white my-[16px] mx-[24px] pl-8 pr-2 py-1.5 rounded-[18px]' : 'bg-secondary lg:px-[122px] px-[24px] py-4 w-full']">
+            :class="['flex flex-row items-center justify-between', isScrolling ? 'nav-scrolling my-[16px] mx-[24px] pl-8 pr-2 py-1.5 rounded-[18px]' : 'bg-secondary lg:px-[122px] px-[24px] py-4 w-full']">
             <div>
-                <a href="/" class="font-[800] text-[#3a3a3a]">
+                <a href="/" class="font-[800] text-[#fff]">
                     ARTIS MOMENTUM
                 </a>
             </div>
-            <div class="xl:flex flex-row items-center gap-[34px] justify-center hidden text-[#3a3a3a]">
+            <div class="xl:flex flex-row items-center gap-[34px] justify-center hidden text-[#fff]">
                 <a href="/" :class="'cursor-pointer' + !checkFocusedLink('/') ? 'nav-list' : 'text-primary'
                     ">
                     Accueil
@@ -67,13 +67,13 @@ onUnmounted(() => {
                     Qui sommes-nous
                 </a>
             </div>
-            <div class="flex flex-row items-center justify-end">
+            <div class="flex flex-row items-center justify-end gap-[4px]">
                 <button :class="['flex flex-row items-center gap-3 bg-transparent min-w-[fit-content]', isScrolling ? 'px-4 py-1.5 rounded-[12px]' : '' ]" @click="logIn">
                     <img src="@/assets/user.svg" alt="" />
-                    <span class="hidden md:block min-w-[96px]">Se connecter</span>
+                    <span class="hidden md:block min-w-[96px] text-white">Se connecter</span>
                 </button>
                 <button
-                    :class="['hidden xl:flex items-center justify-center bg-black text-white hover:text-black hover:bg-transparent focus:bg-transparent focus:outline-none', isScrolling ? 'px-4 py-1.5 rounded-[12px]' : 'px-6 py-3.5']"
+                    :class="['hidden xl:flex items-center justify-center bg-black text-white hover:text-primary hover:bg-transparent focus:bg-transparent focus:outline-none', isScrolling ? 'px-4 py-1.5 rounded-[12px]' : 'px-6 py-3.5']"
                     @click="signUp">
                     <span class="min-w-[130px]">Créer un compte</span>
                 </button>
@@ -87,13 +87,16 @@ onUnmounted(() => {
     z-index: 9999;
 }
 .nav-scrolling {
-    border: 0.5px solid rgb(219, 217, 217);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .nav-list {
     cursor: pointer;
 
     &:hover {
-        color: rgb(219, 217, 217);
+        color: var(--color-primary);
     }
 }
 

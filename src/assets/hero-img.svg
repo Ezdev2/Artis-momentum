@@ -1,16 +1,37 @@
 <svg width="192" height="292" viewBox="0 0 192 292" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_19256_568538)">
-<path opacity="0.7" d="M90 232C134.183 232 170 196.183 170 152C170 107.817 134.183 72 90 72C45.8172 72 10 107.817 10 152C10 196.183 45.8172 232 90 232Z" fill="#FFD700
-"/>
-<path opacity="0.7" d="M40 292C62.0914 292 80 274.091 80 252C80 229.909 62.0914 212 40 212C17.9086 212 0 229.909 0 252C0 274.091 17.9086 292 40 292Z" fill="#FF6347
-"/>
-<path d="M140 2C156.667 18.6667 173.333 18.6667 190 2" stroke="white" stroke-width="4"/>
-<path d="M140 22C156.667 38.6667 173.333 38.6667 190 22" stroke="white" stroke-width="4"/>
-<path d="M140 42C156.667 58.6667 173.333 58.6667 190 42" stroke="white" stroke-width="4"/>
-</g>
-<defs>
-<clipPath id="clip0_19256_568538">
-<rect width="192" height="292" fill="white"/>
-</clipPath>
-</defs>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#45389e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6c5ce7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g filter="url(#blur-filter)">
+    <circle opacity="0.2" cx="90" cy="152" r="80" stroke="url(#grad1)" stroke-width="2" fill="none">
+      <animate attributeName="r" values="78;82;78" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <path opacity="0.3" d="M40 292C62.0914 292 80 274.091 80 252C80 229.909 62.0914 212 40 212C17.9086 212 0 229.909 0 252C0 274.091 17.9086 292 40 292Z" fill="url(#grad1)">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -5; 0 0" dur="3s" repeatCount="indefinite" />
+    </path>
+    
+    <g filter="url(#glow)">
+      <path opacity="0.3" d="M140 2C156.667 18.6667 173.333 18.6667 190 2" stroke="#3498db" stroke-width="2">
+        <animate attributeName="d" values="M140 2C156.667 18.6667 173.333 18.6667 190 2; M140 12C156.667 28.6667 173.333 28.6667 190 12; M140 2C156.667 18.6667 173.333 18.6667 190 2" dur="4s" repeatCount="indefinite" />
+      </path>
+      <path opacity="0.3" d="M140 22C156.667 38.6667 173.333 38.6667 190 22" stroke="#9b59b6" stroke-width="2">
+        <animate attributeName="d" values="M140 22C156.667 38.6667 173.333 38.6667 190 22; M140 32C156.667 48.6667 173.333 48.6667 190 32; M140 22C156.667 38.6667 173.333 38.6667 190 22" dur="4s" repeatCount="indefinite" />
+      </path>
+      <path opacity="0.3" d="M140 42C156.667 58.6667 173.333 58.6667 190 42" stroke="#3498db" stroke-width="2">
+        <animate attributeName="d" values="M140 42C156.667 58.6667 173.333 58.6667 190 42; M140 52C156.667 68.6667 173.333 68.6667 190 52; M140 42C156.667 58.6667 173.333 58.6667 190 42" dur="4s" repeatCount="indefinite" />
+      </path>
+    </g>
+  </g>
 </svg>

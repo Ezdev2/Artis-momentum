@@ -7,10 +7,11 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --color-primary: #3a3a3a;
-  --color-secondary: #ffbe57;
+  --color-primary: #45389e;
+  /* --color-primary: #3a3a3a; */
+  --color-secondary: #000;
   --color-black: #272d4e;
-  --color-blackScale: #3a3a3a;
+  --color-blackScale: #717171;
   --color-bgBlack: #191617;
   --color-bgFooter: #5b5b5b;
   --color-gray: #b4b4b9;
@@ -27,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #000;
 }
 
 button {
@@ -44,6 +46,7 @@ button {
 button:hover {
   border-color: var(--color-primary);
 }
+
 button:focus {
   outline: 4px auto -webkit-focus-ring-color;
 }
@@ -57,12 +60,31 @@ button:focus {
 h1 {
   @apply text-[3rem] lg:text-[4rem] xl:text-[5rem];
 }
+
 h2 {
   @apply text-[1.5rem] lg:text-[2rem] xl:text-[3rem];
 }
+
 h3 {
   @apply text-[1.3rem] lg:text-[1.6rem];
 }
+
 h4 {
   @apply text-[1rem] xl:text-[1.2rem];
+}
+
+.linearBg {
+  background: linear-gradient(85.12deg, #4f12ea -33.54%, #8d1b65 24.17%, #120395 99.96%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.linear {
+  background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
+}
+.glassMorphism {
+  background: rgba(255, 255, 255, 0.108);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }

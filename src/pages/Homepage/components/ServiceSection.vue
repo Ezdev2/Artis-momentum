@@ -1,19 +1,20 @@
 <template>
-    <div class="py-[122px] px-[24px] sm:px-[122px] bg-primary flex flex-col gap-6 justify-center items-cente">
+    <div class="sm:py-[122px] p-[24px] sm:px-[122px] flex flex-col gap-6 justify-center">
         <div class="flex flex-col gap-2">
-            <p class="font-bold text-secondary text-left uppercase">Découvrez notre approche pédagogique
+            <p class="font-bold text-blackScale text-left uppercase">Découvrez notre approche pédagogique
             </p>
             <h2 class="font-bold text-left text-white">Les formations commerciales intra et inter,
                 à distance ou en présentiel, adaptées à votre organisation
             </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="bg-white rounded-lg p-6 transition-all hover:bg-gray-700 hover:shadow-lg" v-for="(item, index) in data" :key="index">
+            <div class="service-card bg-white rounded-lg p-6 transition-all hover:bg-gray-700 hover:shadow-lg"
+                v-for="(item, index) in data" :key="index">
                 <Icon class="h-8 w-8" :icon="item.icon" />
                 <div class="flex flex-col gap-8">
                     <h4 class="text-left font-semibold mb-6 leading-tight">{{ item.title }}</h4>
                     <button
-                        class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white bg-[#3a3a3a] hover:bg-secondary"
+                        class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white linear hover:bg-secondary"
                         @click="goTo(item.link)">
                         <span>Découvrir</span>
                         <img width="12" src="../../../assets/arrow.svg" alt="">
@@ -56,4 +57,23 @@ function goTo(link) {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.service-card {
+    position: relative;
+    background: var(--color-secondary);
+    color: white;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
+    z-index: -1;
+    border-radius: inherit;
+    /* Si votre carte a des coins arrondis */
+}
+</style>
