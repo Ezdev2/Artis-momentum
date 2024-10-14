@@ -74,6 +74,5 @@ function goTo(link) {
     background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
     z-index: -1;
     border-radius: inherit;
-    /* Si votre carte a des coins arrondis */
 }
 </style>

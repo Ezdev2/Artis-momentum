@@ -15,13 +15,13 @@
         <p class="text-center lg:text-left text-white">+1 000 entreprises de toutes tailles font appel à nos formations commerciales pour augmenter la performance
           de leur force de vente.</p>
         <div class="flex gap-2 flex-col md:flex-row">
-          <button class="flex gap-2 items-center text-center px-6 py-3.5 linear text-white" @click="signUp">
+          <button class="flex gap-2 items-center text-center px-6 py-3.5 linear text-white" @click="goTo('/formation')">
             <img src="../../assets/arrow.svg" alt="">
             <span>
               Découvrir nos formations
             </span>
           </button>
-          <button class="text-center px-6 py-3.5 bg-[#fff] text-primary" @click="signUp">
+          <button class="text-center px-6 py-3.5 bg-[#fff] text-primary" @click="goTo('/formation')">
             En savoir plus
           </button>
         </div>
@@ -42,6 +42,13 @@ import Services from './components/ServiceSection.vue';
 import Formations from './components/FormationSection.vue';
 import About from './components/AboutSection.vue';
 import Ressources from './components/RessourceSection.vue';
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+function goTo(link) {
+    router.push(link)
+}
 </script>
 
 <style lang="scss" scoped>
