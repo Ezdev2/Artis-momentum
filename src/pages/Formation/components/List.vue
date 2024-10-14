@@ -1,14 +1,14 @@
 <template>
     <div class="flex flex-col gap-4 w-full px-[122px] py-[80px]">
-        <div class="flex gap-8 justify-between items-center bg-white rounded-lg p-6 transition-all border border-gray hover:border-secondary hover:border-2 hover:bg-gray-700 hover:shadow-lg"
+        <div class="flex gap-8 justify-between items-center glassMorphism rounded-lg p-6 transition-all border border-gray hover:border-secondary hover:border-2 hover:bg-gray-700 hover:shadow-lg"
             v-for="(item, index) in data" :key="index">
             <div class="flex items-center gap-4">
                 <div class="min-w-[160px] h-[160px] bg-blackScale overflow-hidden rounded-[16px]"
                     :style="{ backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }">
                 </div>
                 <div>
-                    <h4 class="text-left font-semibold mb-6 leading-tight">{{ item.title }}</h4>
-                    <p class="text-blackScale text-left">{{ item.description }}</p>
+                    <h4 class="text-left linearBg font-semibold mb-6 leading-tight">{{ item.title }}</h4>
+                    <p class="text-white text-left">{{ item.description }}</p>
                 </div>
             </div>
             <a class="flex gap-4 justify-center items-center text-center p-2 text-white rounded-full" :href="item.link">

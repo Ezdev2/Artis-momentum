@@ -29,14 +29,14 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col items-ceter w-full overflow-hidden">
+  <div class="flex flex-col items-center w-full overflow-hidden">
     <Navbar
       class="fixed"
     />
     <router-view class="mt-[86px]" v-slot="{ Component }">
-      <transition appear name="fade-page" mode="out-in">
-        <component class="bodypage w-full" :is="Component" />
-      </transition>
+      <!-- <transition appear name="fade-page" mode="out-in"> -->
+        <component data-aos="fade-up" class="bodypage w-full" :is="Component" />
+      <!-- </transition> -->
     </router-view>
     <Footer
       class="footer"

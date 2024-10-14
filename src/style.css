@@ -58,7 +58,7 @@ button:focus {
 }
 
 h1 {
-  @apply text-[3rem] lg:text-[4rem] xl:text-[5rem];
+  @apply text-[3rem] lg:text-[4.5rem] xl:text-[5.5rem];
 }
 
 h2 {
