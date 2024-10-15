@@ -51,27 +51,39 @@ const boxes = [
   {
     image: 'https://images.pexels.com/photos/15149190/pexels-photo-15149190/free-photo-of-apprendre-le-volley-ball.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1200&dpr=1',
     icon: "mdi:company",
-    title: 'Recrutement',
-    description: "Depuis 15 ans, nos +100 recruteurs trouvent les meilleurs potentiels partout en France et dans tous les secteurs d'activité. Fonctions commerciales, marketing et executive search."
+    title: 'La Direction commerciale',
+    description: "La direction commerciale est le socle qui permet le développement du chiffre d’affaires de votre entreprise !"
   },
   {
     image: 'https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1200&dpr=1',
     icon: 'mingcute:house-line',
-    title: 'Formation',
-    description: "Artis Momentum est l'organisme de formation spécialisé dans la vente. Améliorez les performances commerciales de votre équipe grâce à 14 programmes pensés et délivrés par des pros de la vente."
+    title: "La Stratégie d'expression",
+    description: "Avant de penser à une stratégie de communication, si vous mettiez en place une réelle stratégie d’expression ?"
   },
   {
     image: 'https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1200&dpr=1',
     icon: 'heroicons:fire',
-    title: 'Coaching Commercial',
-    description: "Révélez toute la puissance de votre équipe commerciale : coacher vos managers et vos commerciaux est le meilleur moyen de maximiser leur productivité et leur motivation ! Découvrez notre méthode de coaching."
+    title: 'Les formations vente',
+    description: "Notre équipe est passionnée par les métiers de la vente et la quête de l’excellence dans la relation client !"
+  },
+  {
+    image: 'https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1200&dpr=1',
+    icon: 'icon-park-outline:code-computer',
+    title: 'Le service informatique',
+    description: "Un service informatique opérationnel 7/7. Reposez-vous et optez pour la tranquillité !"
+  },
+  {
+    image: 'https://images.pexels.com/photos/5439453/pexels-photo-5439453.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1200&dpr=1',
+    icon: 'lucide:handshake',
+    title: 'Le Recrutement',
+    description: "Ne recrutez plus au feeling, sans plan d’action, par faute de temps, de moyens, de connaissances… !"
   },
   {
     image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=2400&h=1200&dpr=1',
     icon: 'uil:user',
-    title: 'Conseil',
-    description: "Uptoo est le 1er cabinet de transformation commerciale. Nos consultants vous aident à construire la bonne méthode de vente qui allie productivité et efficacité."
-  }
+    title: 'Le mentorat',
+    description: "Le mentorat chez Artis Momentum est né d’une envie de partage, de transmettre un savoir-faire à travers un savoir-être exceptionnel."
+  },
 ];
 
 // Method to set the active box

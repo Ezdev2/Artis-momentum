@@ -30,6 +30,10 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener('scroll', checkScroll);
 });
+
+function gotTo(link) {
+    router.push(link);
+}
 </script>
 
 <template>
@@ -74,8 +78,8 @@ onUnmounted(() => {
                 </button>
                 <button
                     :class="['hidden xl:flex items-center justify-center bg-black text-white hover:text-primary hover:bg-transparent focus:bg-transparent focus:outline-none', isScrolling ? 'px-4 py-1.5 rounded-[12px]' : 'px-6 py-3.5']"
-                    @click="signUp">
-                    <span class="min-w-[130px]">Créer un compte</span>
+                    @click="gotTo('/contact')">
+                    <span class="min-w-[130px]">Nous contacter</span>
                 </button>
             </div>
         </div>

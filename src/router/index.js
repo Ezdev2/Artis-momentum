@@ -3,6 +3,7 @@ import Book from '../pages/Book/Book.vue';
 import CallToAction from '../pages/CTA/CallToAction.vue';
 import Formation from "../pages/Formation/Formation.vue";
 import Home from "../pages/Homepage/Home.vue";
+import Contact from '../pages/Contact/Contact.vue';
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
         path: '/cta',
         name: 'CTA',
         component: CallToAction
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact
     },
 ]
 
