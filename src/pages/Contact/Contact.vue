@@ -17,7 +17,6 @@
                         class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white linear hover:bg-secondary"
                         @click="goTo(item.link)">
                         <span>Découvrir</span>
-                        <img width="12" src="../../../assets/arrow.svg" alt="">
                     </button>
                 </div>
             </div>
