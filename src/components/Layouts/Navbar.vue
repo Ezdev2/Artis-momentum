@@ -50,7 +50,7 @@ onUnmounted(() => {
                     ">
                     Nos services
                 </a>
-                <a href="/#formation" :class="'cursor-pointer' + !checkFocusedLink('/')
+                <a href="/formation" :class="'cursor-pointer' + !checkFocusedLink('/')
                     ? 'nav-list'
                     : 'text-primary'
                     ">

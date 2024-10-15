@@ -14,7 +14,7 @@
         <div class="overflow-hidden relative w-full mt-[20px] sm:mt-[40px]">
             <div class="slide-track">
                 <div class="w-[300px] mx-[10px] flex justify-center" v-for="n in 14" :key="n">
-                    <div @click="goTo('/')" class="card min-w-[300px] glassMorphism text-white rounded-[10px] p-[20px] flex items-start gap-4 h-[100%]">
+                    <div @click="goTo(getLink(n))" class="card min-w-[300px] glassMorphism text-white rounded-[10px] p-[20px] flex items-start gap-4 h-[100%]">
                         <div class="w-[100px] flex items-center justify-center">
                             <img width="84" :src="getImageSrc(n)" alt="" />
                         </div>
@@ -38,15 +38,52 @@ import audio from '../../../assets/audio.svg';
 import liveclass from '../../../assets/liveclass.svg';
 import newsletter from '../../../assets/newsletter.svg';
 import video from '../../../assets/video.svg';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const cards = [
-    { image: book, title: 'Livre', description: 'Découvrez notre sélection de livres spécialisés.' },
-    { image: article, title: 'Article', description: 'Lisez des articles experts sur les ventes.' },
-    { image: audio, title: 'Podcast', description: 'Écoutez nos podcasts pour des conseils pratiques.' },
-    { image: liveclass, title: 'Live Class', description: 'Participez à nos formations en direct.' },
-    { image: newsletter, title: 'Newsletter', description: 'Inscrivez-vous à notre newsletter.' },
-    { image: video, title: 'Vidéo', description: 'Regardez nos vidéos de formations.' }
+    { 
+        image: book, 
+        title: 'Livre', 
+        description: 'Découvrez notre sélection de livres spécialisés.',
+        link: '/book'
+    },
+    { 
+        image: article, 
+        title: 'Article', 
+        description: 'Lisez des articles experts sur les ventes.',
+        link: '/'
+    },
+    { 
+        image: audio, 
+        title: 'Podcast', 
+        description: 'Écoutez nos podcasts pour des conseils pratiques.',
+        link: '/'
+    },
+    { 
+        image: liveclass, 
+        title: 'Live Class', 
+        description: 'Participez à nos formations en direct.',
+        link: '/'
+    },
+    { 
+        image: newsletter, 
+        title: 'Newsletter', 
+        description: 'Inscrivez-vous à notre newsletter.',
+        link: '/'
+    },
+    { 
+        image: video, 
+        title: 'Vidéo', 
+        description: 'Regardez nos vidéos de formations.',
+        link: '/'
+    }
 ];
+
+const getLink = (index) => {
+    return cards[(index - 1) % cards.length].link;
+};
 const getImageSrc = (index) => {
     return cards[(index - 1) % cards.length].image;
 };
@@ -60,7 +97,7 @@ const getCardDescription = (index) => {
 };
 
 function goTo(link) {
-    console.log(link);
+    router.push(link)
 }
 </script>
 

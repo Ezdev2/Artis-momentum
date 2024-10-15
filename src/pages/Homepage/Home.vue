@@ -21,8 +21,8 @@
               Découvrir nos formations
             </span>
           </button>
-          <button class="text-center px-6 py-3.5 bg-[#fff] text-primary" @click="goTo('/formation')">
-            En savoir plus
+          <button class="text-center px-6 py-3.5 bg-[#fff] text-primary" @click="goTo('/book')">
+            Voir les livres
           </button>
         </div>
       </div>

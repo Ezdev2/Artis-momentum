@@ -8,7 +8,7 @@
             </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="service-card bg-white rounded-lg p-6 transition-all hover:bg-gray-700 hover:shadow-lg"
+            <div class="service-card flex flex-col gap-4  bg-white rounded-lg p-6 transition-all hover:bg-gray-700 hover:shadow-lg"
                 v-for="(item, index) in data" :key="index">
                 <Icon class="h-8 w-8" :icon="item.icon" />
                 <div class="flex flex-col gap-8">

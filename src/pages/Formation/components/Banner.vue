@@ -2,14 +2,13 @@
     <div class="h-[50vh] bg-transparent px-[122px] pt-[80px] overflow-hidden relative">
         <div class="flex gap-4 justify-between">
             <div class="w-1/2 flex flex-col gap-4">
-                <h2 class="text-left linearBg font-bold">L'agence spécialiste de la vente.</h2>
-                <p class="text-left text-white">Nous vous aidons à résoudre ce qui freine votre performance commerciale
-                    :
-                    recrutement de bons commerciaux, formation des équipes, audit, modernisation des méthodes de vente
-                    et du CRM.</p>
+                <p class="font-bold text-blackScale text-left uppercase">Découvrir nos formations
+                </p>
+                <h2 class="text-left linearBg font-bold">{{ data.title }}</h2>
+                <p class="text-left text-white">{{ data.description }}</p>
                 <button
                     class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white linear hover:bg-secondary max-w-[300px]"
-                    @click="showDetail()">
+                    @click="showDetail">
                     <span>Commencer maintenant</span>
                     <img width="12" src="../../../assets/arrow.svg" alt="">
                 </button>
@@ -24,7 +23,10 @@
     </div>
 </template>
 <script setup>
-const emit = defineEmits(['showDetail'])
+const emit = defineEmits(['showDetail']);
+const props = defineProps({
+    data: { type: Object, default: {} }
+});
 
 function showDetail() {
     emit('showDetail')
