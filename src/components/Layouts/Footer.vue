@@ -13,39 +13,39 @@ onMounted(() => {
 
 <template>
     <div class="footer">
-        <div class="flex flex-col gap-[24px]">
+        <div class="hidden md:flex flex-col gap-[24px]">
             <p class="text-left">© Copyright {{ currentYear }}</p>
             <p class="footer__title">ARTIS MOMENTUM</p>
         </div>
-        <div class="flex flex-col items-start gap-[24px]">
+        <div class="flex flex-col items-center md:items-start gap-[24px]">
             <p class="footer__title">Menu</p>
             <a href="/">Accueil</a>
             <a href="/#formation">Formation</a>
             <a href="/#service">Services</a>
         </div>
-        <div class="flex flex-col items-start gap-[24px]">
+        <div class="flex flex-col items-center md:items-start  gap-[24px]">
             <p class="footer__title">Payement</p>
             <a href="#">Stripe</a>
             <a href="#">Physique</a>
             <a href="#">Mode de payement</a>
         </div>
-        <div class="flex flex-col items-start gap-[24px]">
+        <div class="flex flex-col items-center md:items-start  gap-[24px]">
             <p class="footer__title">Nous contacter</p>
             <a href="#">Téléphone: 020 000 000</a>
             <a href="#">Email:  test@gmail.com</a>
             <a href="#">Adresse: Rue 201, Ankatso</a>
+        </div>
+        <div class="flex md:hidden flex-col gap-[24px]">
+            <p class="text-left">© Copyright {{ currentYear }}</p>
+            <p class="footer__title">ARTIS MOMENTUM</p>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .footer {
-    @apply bg-transparent w-full text-white;
-    display: flex;
+    @apply flex flex-col items-center justify-center md:flex-row md:justify-between md:items-start bg-transparent w-full text-white p-[24px] md:py-[80px] md:px-[122px];
     flex-wrap: wrap;
-    padding: 80px 194px;
-    justify-content: space-between;
-    align-items: flex-start;
     align-self: stretch;
     gap: 20px;
 

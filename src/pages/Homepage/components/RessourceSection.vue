@@ -1,6 +1,6 @@
 <template>
-    <div class="py-[122px] px-[24px] sm:px-[122px] linear flex flex-col gap-6 justify-center items-center">
-        <div class="flex flex-col gap-2 w-full">
+    <div class="py-[122px] linear flex flex-col gap-6 justify-center items-center w-full">
+        <div class="flex flex-col gap-2 w-full px-[24px] sm:px-[122px]">
             <p class="font-bold text-white text-left uppercase">Nos ressources</p>
             <h2 class="font-bold text-left text-white">Vive la vente !</h2>
             <p class="text-white text-left">
@@ -11,7 +11,7 @@
         </div>
 
         <!-- Infinite scroll slider -->
-        <div class="overflow-hidden relative w-full">
+        <div class="overflow-hidden relative w-full mt-[20px] sm:mt-[40px]">
             <div class="slide-track">
                 <div class="w-[300px] mx-[10px] flex justify-center" v-for="n in 14" :key="n">
                     <div @click="goTo('/')" class="card min-w-[300px] glassMorphism text-white rounded-[10px] p-[20px] flex items-start gap-4 h-[100%]">

@@ -7,31 +7,18 @@
                     :
                     recrutement de bons commerciaux, formation des équipes, audit, modernisation des méthodes de vente
                     et du CRM.</p>
-                <button
-                    class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white linear hover:bg-secondary max-w-[300px]"
-                    @click="showDetail()">
-                    <span>Commencer maintenant</span>
-                    <img width="12" src="../../../assets/arrow.svg" alt="">
-                </button>
             </div>
-            <div class="video-container">
-                <video class="rounded-[16px]" width="800" height="600" autoplay loop>
-                    <source src="https://videos.pexels.com/video-files/3129424/3129424-uhd_2560_1440_24fps.mp4"
-                        type="video/mp4">
-                </video>
+            <div class="banner-container">
+                <img  height="200" src="https://images.pexels.com/photos/9443526/pexels-photo-9443526.jpeg?auto=compress&cs=tinysrgb&w=560&h=560&dpr=1" alt="">
             </div>
         </div>
     </div>
 </template>
 <script setup>
-const emit = defineEmits(['showDetail'])
 
-function showDetail() {
-    emit('showDetail')
-}
 </script>
 <style scoped>
-.video-container::before {
+.banner-container::before {
     content: "";
     position: absolute;
     top: -3px;
@@ -42,7 +29,7 @@ function showDetail() {
     z-index: -1;
     border-radius: 16px;
 }
-.video-container {
+.banner-container {
     width: 650px;
     height: 500px;
     position: relative;
@@ -51,12 +38,5 @@ function showDetail() {
     align-items: center;
     padding: 4px;
     border-radius: 20px;
-    transform: rotate(5deg);
-}
-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
 }
 </style>
