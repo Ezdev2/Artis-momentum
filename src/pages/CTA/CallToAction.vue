@@ -1,18 +1,21 @@
 <template>
-    <div class="sm:py-[122px] p-[24px] sm:px-[122px] flex flex-col gap-8 justify-center">
-        <div class="flex  gap-4">
-            <img class="rounded-[4px]" width="200"
-                src="https://images.pexels.com/photos/3280211/pexels-photo-3280211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="">
-            <div>
-                <h2 class="font-bold text-left text-white">Merci d'avoir téléchargé : <br>
-                    <span>"Le livre sur la vente pour booster vos commerciaux et votre croissance"</span>
-                </h2>
-                <p class="text-blackScale text-left">
-                    Si votre téléchargement ne démarre pas automatiquement, <a href="/"
-                        class="text-primary hover:text-purple-400">cliquez ici</a>
-                </p>
+    <div class="lg:py-[122px] p-[24px] lg:px-[122px] flex flex-col gap-8 justify-center">
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-8">
+            <div class="col-span-2 flex gap-4">
+                <img class="rounded-[4px]" width="200"
+                    src="https://images.pexels.com/photos/3280211/pexels-photo-3280211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+                <div>
+                    <h2 class="font-bold text-left text-white">Merci d'avoir téléchargé : <br>
+                        <span>"Le livre sur la vente pour booster vos commerciaux et votre croissance"</span>
+                    </h2>
+                    <p class="text-blackScale text-left">
+                        Si votre téléchargement ne démarre pas automatiquement, <a href="/"
+                            class="text-primary hover:text-purple-400">cliquez ici</a>
+                    </p>
+                </div>
             </div>
+            <Form />
         </div>
         <hr class="text-blackScale">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -39,6 +42,7 @@
 
 <script setup>
 import { Icon } from '@iconify/vue';
+import Form from '../../components/Common/Form.vue';
 
 const data = [
     {
@@ -86,6 +90,7 @@ function goTo(link) {
     z-index: -1;
     border-radius: inherit;
 }
+
 .desc {
     height: 50px;
     overflow: hidden;

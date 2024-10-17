@@ -1,6 +1,7 @@
 <script setup>
 import { useRoute, useRouter } from "vue-router";
 import { onMounted, onUnmounted, ref } from "vue";
+import { Icon } from '@iconify/vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -72,14 +73,15 @@ function gotTo(link) {
                 </a>
             </div>
             <div class="flex flex-row items-center justify-end gap-[4px]">
-                <button :class="['flex flex-row items-center gap-3 bg-transparent min-w-[fit-content]', isScrolling ? 'px-4 py-1.5 rounded-[12px]' : '' ]" @click="logIn">
+                <!-- <button :class="['flex flex-row items-center gap-3 bg-transparent min-w-[fit-content]', isScrolling ? 'px-4 py-1.5 rounded-[12px]' : '' ]" @click="logIn">
                     <img src="@/assets/user.svg" alt="" />
                     <span class="hidden md:block min-w-[96px] text-white">Se connecter</span>
-                </button>
+                </button> -->
                 <button
-                    :class="['hidden xl:flex items-center justify-center bg-black text-white hover:text-primary hover:bg-transparent focus:bg-transparent focus:outline-none', isScrolling ? 'px-4 py-1.5 rounded-[12px]' : 'px-6 py-3.5']"
+                    :class="['flex flex-row items-center gap-3 min-w-[fit-content]', isScrolling ? 'px-4 py-1.5 rounded-[12px] bg-primary  hover:bg-secondary' : 'bg-transparent' ]"
                     @click="gotTo('/contact')">
-                    <span class="min-w-[130px]">Nous contacter</span>
+                    <Icon icon="ri:phone-line" width="24" height="24"  style="color: white" />
+                    <span class="min-w-[130px] text-white">Nous contacter</span>
                 </button>
             </div>
         </div>

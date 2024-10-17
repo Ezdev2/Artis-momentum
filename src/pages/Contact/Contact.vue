@@ -1,77 +1,19 @@
 <template>
-    <div class="sm:py-[122px] p-[24px] sm:px-[122px] flex flex-col gap-6 justify-center">
-        <div class="flex flex-col gap-2">
-            <p class="font-bold text-blackScale text-left uppercase">Découvrez notre approche pédagogique
+    <div class="p-[24px] lg:px-[122px] pt-[80px] md:grid grid-cols-2 gap-8">
+        <div class="flex flex-col items-center gap-8 w-full">
+            <h2 class="linearBg text-left font-bold w-full">Contactez-nous</h2>
+            <p class="text-white text-left ">Nous sommes là pour répondre à toutes vos questions. Remplissez
+                le formulaire ci-dessous pour nous contacter, et nous reviendrons vers vous dans les plus brefs délais.
             </p>
-            <h2 class="font-bold text-left text-white">Les formations commerciales intra et inter,
-                à distance ou en présentiel, adaptées à votre organisation
-            </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="service-card flex flex-col gap-4  bg-white rounded-lg p-6 transition-all hover:bg-gray-700 hover:shadow-lg"
-                v-for="(item, index) in data" :key="index">
-                <Icon class="h-8 w-8" :icon="item.icon" />
-                <div class="flex flex-col gap-8">
-                    <h4 class="text-left font-semibold mb-6 leading-tight">{{ item.title }}</h4>
-                    <button
-                        class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white linear hover:bg-secondary"
-                        @click="goTo(item.link)">
-                        <span>Découvrir</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
+        </div>
+        <!-- Formulaire de Contact -->
+        <Form />
+    </div>
 </template>
 
 <script setup>
-import { Icon } from '@iconify/vue';
-
-const data = [
-    {
-        icon: "mdi:company",
-        title: "Grandes entreprises",
-        link: "/"
-    },
-    {
-        icon: "mingcute:house-line",
-        title: "PME",
-        link: "/"
-    },
-    {
-        icon: "heroicons:fire",
-        title: "Start-ups",
-        link: "/"
-    },
-    {
-        icon: "uil:user",
-        title: "Commerciaux",
-        link: "/"
-    },
-]
-
-function goTo(link) {
-    console.log(link);
-}
+import Form from '../../components/Common/Form.vue';
 </script>
 
-<style lang="scss" scoped>
-.service-card {
-    position: relative;
-    background: var(--color-secondary);
-    color: white;
-}
-
-.service-card::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
-    z-index: -1;
-    border-radius: inherit;
-}
-</style>
+<style scoped></style>

@@ -1,34 +1,39 @@
 <template>
-    <div class="p-[24px] md:py-[80px] md:px-[122px]">
+    <div class=" p-[24px] md:py-[80px] md:px-[122px]">
         <div v-if="showDownload">
             <DownloadBook :databook="dataBook" />
             <hr class="text-blackScale">
         </div>
-        <div class="py-[24px]">
-            <h3 class="font-bold text-left text-white">
-                Télécharger des livres essentiels pour comprendre les enjeux modernes du business
-            </h3>
-            <div
-                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-8 w-full py-[24px]">
-                <div @click="showDetail(index)" class="flex gap-8 justify-between glassMorphism rounded-lg p-4 transition-all border border-gray hover:border-secondary hover:border-2 hover:bg-gray-700 hover:shadow-lg"
-                    v-for="(item, index) in data" :key="index">
-                    <div class="flex flex-col items-center gap-4 overflow-hidden">
-                        <div class="w-full h-[240px] bg-blackScale overflow-hidden rounded-[8px]"
-                            :style="{ backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }">
-                        </div>
-                        <div>
-                            <h4 class="text-left linearBg font-semibold mb-6 leading-tight">{{ item.title }}</h4>
-                            <p class="text-white text-left desc">{{ item.description }}</p>
+        <div class="lg:grid grid-cols-3 gap-8 mt-8">
+            <div class="col-span-2">
+                <h3 class="font-bold text-left text-white">
+                    Télécharger des livres essentiels pour comprendre les enjeux modernes du business
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3   gap-8 w-full py-[24px]">
+                    <div @click="showDetail(index)"
+                        class="flex gap-8 justify-between glassMorphism rounded-lg p-4 transition-all border border-gray hover:border-secondary hover:border-2 hover:bg-gray-700 hover:shadow-lg"
+                        v-for="(item, index) in data" :key="index">
+                        <div class="flex flex-col items-center gap-4 overflow-hidden">
+                            <div class="w-full h-[240px] bg-blackScale overflow-hidden rounded-[8px]"
+                                :style="{ backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }">
+                            </div>
+                            <div>
+                                <h4 class="text-left linearBg font-semibold mb-6 leading-tight">{{ item.title }}</h4>
+                                <p class="text-white text-left desc">{{ item.description }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Sidebar />
         </div>
+
     </div>
 </template>
 <script setup>
 import { ref } from 'vue';
 import DownloadBook from './DowloadBook.vue';
+import Sidebar from '../../components/Layouts/Sidebar.vue';
 
 const showDownload = ref(false);
 const dataBook = ref({});
