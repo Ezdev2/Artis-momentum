@@ -67,7 +67,7 @@ function gotTo(link) {
                     ">
                     Ressources
                 </a>
-                <a href="/#about" :class="'cursor-pointer' + !checkFocusedLink('/') ? 'nav-list' : 'text-primary'
+                <a href="/about" :class="'cursor-pointer' + !checkFocusedLink('/') ? 'nav-list' : 'text-primary'
                     ">
                     Qui sommes-nous
                 </a>

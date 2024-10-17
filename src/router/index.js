@@ -6,6 +6,7 @@ import Home from "../pages/Homepage/Home.vue";
 import Contact from '../pages/Contact/Contact.vue';
 import Funding from '../pages/Other/Funding.vue';
 import Certification from '../pages/Other/Certification.vue';
+import About from '../pages/Other/About.vue';
 
 const routes = [
     {
@@ -42,6 +43,11 @@ const routes = [
         path: '/certification',
         name: 'Certification',
         component: Certification
+    },
+    {
+        path: '/about',
+        name: 'About',
+        component: About
     },
 ]
 
