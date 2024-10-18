@@ -31,7 +31,7 @@
     <div class="w-full flex flex-col items-center">
       <button
         class="w-full md:max-w-[200px] flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white bg-primary hover:bg-secondary"
-        @click="goTo('/')">
+        @click="goTo('/about')">
         <span>En savoir plus</span>
         <img width="12" src="../../../assets/arrow.svg" alt="">
       </button>
@@ -42,6 +42,9 @@
 <script setup>
 import { ref } from 'vue';
 import { Icon } from '@iconify/vue';
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 // Reactive state
 const activeIndex = ref(0);
@@ -92,7 +95,7 @@ function setActive(index) {
 }
 
 function goTo(link) {
-  console.log(link);
+    router.push(link)
 }
 </script>
 

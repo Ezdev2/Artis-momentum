@@ -33,22 +33,22 @@ const data = [
     {
         icon: "mdi:company",
         title: "Grandes entreprises",
-        link: "/"
+        link: "/service"
     },
     {
         icon: "mingcute:house-line",
         title: "PME",
-        link: "/"
+        link: "/service"
     },
     {
         icon: "heroicons:fire",
         title: "Start-ups",
-        link: "/"
+        link: "/service"
     },
     {
         icon: "uil:user",
         title: "Commerciaux",
-        link: "/"
+        link: "/service"
     },
 ]
 
