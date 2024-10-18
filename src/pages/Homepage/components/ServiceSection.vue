@@ -28,6 +28,9 @@
 
 <script setup>
 import { Icon } from '@iconify/vue';
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const data = [
     {
@@ -53,7 +56,7 @@ const data = [
 ]
 
 function goTo(link) {
-    console.log(link);
+    router.push(link)
 }
 </script>
 
