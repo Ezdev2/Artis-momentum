@@ -1,6 +1,6 @@
 <template>
-    <div class="p-[24px] lg:px-[122px] pt-[80px] text-white">
-      <h2 class="text-left font-bold mb-6 linearBg">Qui sommes-nous ?</h2>
+    <div class="p-[24px] lg:px-[122px] lg:pt-[80px] text-white">
+      <h2 class="text-left font-bold mb-6 linearBg">Nos services</h2>
   
       <div :class="selectedService ? 'grid grid-cols-3 gap-8' : ''">
         <!-- Ce bloc n'existe pas si aucun service n'est sélectionné -->

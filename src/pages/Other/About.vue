@@ -1,5 +1,5 @@
 <template>
-  <div class="p-[24px] lg:px-[122px] pt-[80px] text-white">
+  <div class="p-[24px] lg:px-[122px] lg:pt-[80px] text-white">
     <!-- Section Qui sommes-nous -->
     <h2 class="text-left font-bold mb-6 linearBg">Qui sommes-nous ?</h2>
 
