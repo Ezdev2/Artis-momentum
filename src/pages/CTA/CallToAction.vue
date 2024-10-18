@@ -1,7 +1,7 @@
 <template>
     <div class="lg:py-[122px] p-[24px] lg:px-[122px] flex flex-col gap-8 justify-center">
         <div class="grid lg:grid-cols-3 grid-cols-1 gap-8">
-            <div class="col-span-2 flex gap-4">
+            <div class="col-span-2 flex flex-col md:flex-row gap-4">
                 <img class="rounded-[4px]" width="200"
                     src="https://images.pexels.com/photos/3280211/pexels-photo-3280211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     alt="">

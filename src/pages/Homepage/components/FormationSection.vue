@@ -1,5 +1,5 @@
 <template>
-    <div class="py-[122px] px-[24px] sm:px-[122px] flex flex-col lg:flex-row gap-6 justify-center relative">
+    <div class="py-[122px] px-[24px] sm:px-[122px] flex flex-col lg:flex-row gap-6 justify-center relative w-full">
         <div class="line">
             <img width="860px" src="../../../assets/animated-bull.svg" alt="" />
         </div>
@@ -21,15 +21,15 @@
             </button>
         </div>
         <div class="flex flex-col gap-4 lg:w-2/3">
-            <div class="flex gap-8 justify-between items-center glassMorphism rounded-lg p-6 transition-all border border-gray hover:border-secondary hover:border-2 hover:bg-gray-700 hover:shadow-lg"
+            <div class="flex gap-8 justify-between items-center glassMorphism rounded-lg p-6 transition-all border border-gray hover:border-secondary hover:border-2 hover:bg-gray-700 hover:shadow-lg overflow-hidden"
                 v-for="(item, index) in data" :key="index">
                 <div class="flex items-center gap-4">
-                    <div class="min-w-[160px] h-[160px] bg-blackScale overflow-hidden rounded-[16px]"
+                    <div class="hidden md:block min-w-[160px] h-[160px] bg-blackScale overflow-hidden rounded-[16px]"
                         :style="{ backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }">
                     </div>
                     <div>
                         <h4 class="text-left font-semibold mb-6 leading-tight linearBg">{{ item.title }}</h4>
-                        <p class="text-white text-left">{{ item.description }}</p>
+                        <p class="text-white text-left desc">{{ item.description }}</p>
                     </div>
                 </div>
                 <a class="flex gap-4 justify-center items-center text-center p-2 text-white rounded-full"
@@ -84,5 +84,14 @@ function goTo(link) {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+.desc {
+    height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 </style>

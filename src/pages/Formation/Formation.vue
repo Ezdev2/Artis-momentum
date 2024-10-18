@@ -1,7 +1,7 @@
 <template>
-    <div v-if="listing">
+    <div v-if="listing" class="p-[24px] lg:px-[122px]">
         <Banner :data="data[0]" @show-detail="showDetail(0)" />
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-8 w-full px-[122px] py-[80px]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-8 w-full py-[36px] md:py-[80px]">
             <div @click="showDetail(index)"
                 class="flex gap-8 justify-between items-center glassMorphism rounded-lg p-4 transition-all border border-gray hover:border-secondary hover:border-2 hover:bg-gray-700 hover:shadow-lg"
                 v-for="(item, index) in data" :key="index">

@@ -7,6 +7,7 @@ import Contact from '../pages/Contact/Contact.vue';
 import Funding from '../pages/Other/Funding.vue';
 import Certification from '../pages/Other/Certification.vue';
 import About from '../pages/Other/About.vue';
+import Service from '../pages/Other/Service.vue';
 
 const routes = [
     {
@@ -48,6 +49,11 @@ const routes = [
         path: '/about',
         name: 'About',
         component: About
+    },
+    {
+        path: '/service',
+        name: 'Service',
+        component: Service
     },
 ]
 

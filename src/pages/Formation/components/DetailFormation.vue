@@ -2,7 +2,7 @@
     <div class="bg-transparent p-[24px] lg:px-[122px] pt-[80px] md:grid grid-cols-3 gap-8">
         <div class="col-span-2 flex flex-col gap-4 overflow-hidden relative">
             <!-- Breadcrumb Section -->
-            <div class="w-full flex justify-between">
+            <div class="w-full flex gap-2 justify-between items-center">
                 <p class="text-left text-white">
                     <a href="/formation">
                         Listes des formations
@@ -10,10 +10,10 @@
                     / <span class="font-bold">{{ data.title }}</span>
                 </p>
                 <div>
-                    <button class="flex gap-2 items-center justify-center text-center px-6 py-3.5 linear text-white"
+                    <button class="flex gap-2 items-center justify-center text-center px-4 py-2 linear text-white"
                         @click="goTo('/cta')">
                         <Icon icon="radix-icons:download" />
-                        <span>
+                        <span class="hidden lg:block">
                             Télécharger le PDF
                         </span>
                     </button>
@@ -21,7 +21,7 @@
             </div>
 
             <!-- Banner Image Section -->
-            <div class="banner-container h-[400px] w-full mb-[20px]">
+            <div class="banner-container h-[150px] md:h-[400px] w-full mb-[20px]">
                 <img :src="data.img" alt="" class="object-cover w-full h-full">
             </div>
 

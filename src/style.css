@@ -78,6 +78,11 @@ h4 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.linearSecondaryBg {
+  background: linear-gradient(to right, #6EE7B7, #3B82F6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 .linear {
   background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
