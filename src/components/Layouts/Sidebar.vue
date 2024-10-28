@@ -18,7 +18,7 @@
             <h3 class="text-left text-white font-bold">Certifications</h3>
             <hr class="text-blackScale">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
-                <div v-for="(item, index) in certifications" :key="'certification-' + index" class="linear p-4 text-left rounded-lg shadow-lg">
+                <div v-for="(item, index) in certifications" :key="'certification-' + index" class="linearDark p-4 text-left rounded-lg shadow-lg">
                     <h4 class="text-xl font-semibold text-white">{{ item.title }}</h4>
                     <p class="text-gray mt-2 desc">{{ item.description }}</p>
                     <a :href="item.link" class="mt-4 inline-block bg-secondary text-white py-2 px-4 rounded hover:bg-primary hover:text-white transition">En savoir plus</a>

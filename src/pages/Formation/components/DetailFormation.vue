@@ -10,7 +10,7 @@
                     / <span class="font-bold">{{ data.title }}</span>
                 </p>
                 <div>
-                    <button class="flex gap-2 items-center justify-center text-center px-4 py-2 linear text-white"
+                    <button class="flex gap-2 items-center justify-center text-center px-4 py-2 bg-primary text-white"
                         @click="goTo('/cta')">
                         <Icon icon="radix-icons:download" />
                         <span class="hidden lg:block">
@@ -29,7 +29,7 @@
             <div class="flex flex-col gap-4">
                 <!-- <h2 class="text-left linearBg font-bold">{{ data.title }}</h2> -->
                 <div class="flex justify-between items-center w-full mb-6 ">
-                    <h2 class="text-left linearBg font-bold">{{ data.title }}</h2>
+                    <h2 class="text-left text-primary font-bold">{{ data.title }}</h2>
                     <div class="flex items-center">
                         <template v-for="star in getStars(data.rating)" :key="star.index">
                             <Icon :icon="star.icon" width="24" height="24" :style="{ color: star.color }" />

@@ -27,7 +27,7 @@
 
             <!-- Submit button -->
             <div class="flex justify-end">
-                <button type="submit" class="linear text-white py-2 px-6 rounded hover:bg-secondary transition">
+                <button type="submit" class="linearDark text-white py-2 px-6 rounded hover:bg-secondary transition">
                     Envoyer
                 </button>
             </div>

@@ -7,9 +7,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --color-primary: #45389e;
+  --color-primary: #2B78E4;
   /* --color-primary: #3a3a3a; */
-  --color-secondary: #000;
+  --color-secondary: #141414;
   --color-black: #272d4e;
   --color-blackScale: #717171;
   --color-bgBlack: #191617;
@@ -28,7 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #141414;
 }
 
 button {
@@ -74,7 +74,14 @@ h4 {
 }
 
 .linearBg {
-  background: linear-gradient(85.12deg, #4f12ea -33.54%, #8d1b65 24.17%, #120395 99.96%);
+  /* background: linear-gradient(85.12deg, #4f12ea -33.54%, #8d1b65 24.17%, #120395 99.96%); */
+  background: linear-gradient(
+    135deg,
+    #2B78E4 0%,
+    #8A2BE2 50%,
+    #1E54A7 100%
+  );
+  opacity: 0.8; 
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -83,9 +90,18 @@ h4 {
   -webkit-background-clip: text;
   color: transparent;
 }
+.linearDark {
+  background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
+}
 
 .linear {
-  background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
+  background: linear-gradient(
+    135deg,
+    #2B78E4 0%,
+    #8A2BE2 50%,
+    #1E54A7 100%
+  );
+  opacity: 0.8; 
 }
 .glassMorphism {
   background: rgba(255, 255, 255, 0.108);
