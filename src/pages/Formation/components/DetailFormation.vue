@@ -21,8 +21,8 @@
             </div>
 
             <!-- Banner Image Section -->
-            <div class="banner-container h-[150px] md:h-[400px] w-full mb-[20px]">
-                <img :src="data.img" alt="" class="object-cover w-full h-full">
+            <div class="banner-container h-[150px] md:h-[700px] w-full mb-[20px]">
+                <img :src="data.img" alt="" class="object-fit w-full h-full">
             </div>
 
             <!-- Title and Description -->

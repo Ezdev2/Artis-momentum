@@ -1,11 +1,12 @@
 <template>
-    <div class="md:h-[50vh] bg-transparent pt-[24px] md:pt-[80px] overflow-hidden relative">
+    <div class="md:h-[100vh] bg-transparent pt-[24px] md:pt-[80px] overflow-hidden relative">
         <div class="flex gap-4 justify-between">
             <div class="md:w-1/2 flex flex-col gap-4">
-                <p class="font-bold text-blackScale text-left uppercase">Découvrir nos formations
+                <p class="font-bold text-blackScale text-left uppercase">Améliorez les performances de vos équipes commerciales
                 </p>
-                <h2 class="text-left linearBg font-bold">{{ data.title }}</h2>
-                <p class="text-left text-white">{{ data.description }}</p>
+                <h2 class="text-left linearBg font-bold">Nos programmes de formation pour booster vos ventes</h2>
+                <p class="text-left text-white">Artis est le leader incontournable de la formation aux métiers de la vente, choisi par plus de 2000 clients pour stimuler durablement leur croissance.
+                </p>
                 <button
                     class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white linear hover:bg-secondary max-w-[300px]"
                     @click="showDetail">
@@ -40,7 +41,7 @@ function showDetail() {
     left: -3px;
     right: -3px;
     bottom: -3px;
-    background: linear-gradient(85.12deg, #FF6F20 -33.54%, #C75B00 24.17%, #8A3B00 99.96%);
+    background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
     z-index: -1;
     border-radius: 16px;
 }

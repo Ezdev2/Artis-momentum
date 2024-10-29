@@ -6,7 +6,7 @@
                 class="flex gap-8 justify-between items-center glassMorphism rounded-lg p-4 transition-all border border-gray hover:border-secondary hover:border-2 hover:bg-gray-700 hover:shadow-lg"
                 v-for="(item, index) in data" :key="index">
                 <div class="flex flex-col items-center gap-4">
-                    <div class="w-full h-[240px] bg-blackScale overflow-hidden rounded-[8px]"
+                    <div class="w-full h-[300px] bg-blackScale overflow-hidden rounded-[8px]"
                         :style="{ backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }">
                     </div>
                     <div>
@@ -34,50 +34,88 @@ import Banner from './components/Banner.vue';
 // import List from './components/List.vue';
 import DetailFormation from './components/DetailFormation.vue';
 import { Icon } from '@iconify/vue';
+import img1 from '@/assets/fondamentaux.webp';
+import img2 from '@/assets/prospection.png';
+import img3 from '@/assets/relation-client.png';
+import img4 from '@/assets/viser-100-closing.png';
+import img5 from '@/assets/key-account-mgmt.png';
+import img6 from '@/assets/vente-linkedin.png';
+import img7 from '@/assets/vente-indirecte.png';
+import img8 from '@/assets/vente-a-distance.png';
+import img9 from '@/assets/coaching.png';
+import img10 from '@/assets/evaluation.png';
 
 const listing = ref(true);
 const dataFormation = ref({});
 
 const data = [
     {
-        img: "https://images.pexels.com/photos/241832/pexels-photo-241832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "Grandes entreprises",
-        description: "Trouvez la bonne formation, adaptée à votre besoin, votre secteur d'activité et votre métier : Commercial(e) terrain,Key Account Manager (KAM), Directeur(trice)Commercial(e)...",
+        img: img1,
+        title: "Les fondamentaux de la vente",
+        description: "Les meilleures techniques et routines pour renforcer l’efficacité de ses commerciaux tout au long du cycle de vente.",
         rating: 4,
         content: "Dans un monde saturé d'informations et de distractions, capter et conserver l’attention du consommateur est devenu un défi majeur pour les entreprises. Ce livre explore en profondeur l’économie de l’attention, un concept qui devient incontournable dans le marketing digital et la gestion de la relation client. L’auteur y décrit les nouvelles règles du jeu pour capter l’attention dans un environnement numérique saturé, où les consommateurs sont constamment sollicités. Ce livre vous guide sur la manière d’adapter vos stratégies de marketing pour rester visible et pertinent. En se basant sur les dernières avancées en neurosciences, en psychologie du consommateur, et en data analytics, l’auteur présente des méthodes efficaces pour personnaliser l’expérience client et maximiser l’impact de vos messages publicitaires. Le livre explore également comment les entreprises peuvent bâtir une relation authentique et de long terme avec leurs clients en offrant des expériences qui répondent à leurs besoins et aspirations.L’économie de l’attention ne concerne pas uniquement les marques et leurs campagnes publicitaires, mais aussi la manière dont les entreprises gèrent leur communication interne, leur branding, et l’expérience de leurs employés. Ce livre démontre comment les entreprises peuvent utiliser la puissance de l’attention pour se différencier de la concurrence, mais aussi comment éviter les pièges d’une sur-saturation qui peut entraîner une perte d’engagement. Un guide essentiel pour les marketeurs, les chefs d’entreprise et tous ceux qui veulent rester compétitifs dans un monde où l’attention est la ressource la plus précieuse. Ce livre vous guide sur la manière d’adapter vos stratégies de marketing pour rester visible et pertinent. En se basant sur les dernières avancées en neurosciences, en psychologie du consommateur, et en data analytics, l’auteur présente des méthodes efficaces pour personnaliser l’expérience client et maximiser l’impact de vos messages publicitaires. Le livre explore également comment les entreprises peuvent bâtir une relation authentique et de long terme avec leurs clients en offrant des expériences qui répondent à leurs besoins et aspirations.L’économie de l’attention ne concerne pas uniquement les marques et leurs campagnes publicitaires, mais aussi la manière dont les entreprises gèrent leur communication interne, leur branding, et l’expérience de leurs employés. Ce livre démontre comment les entreprises peuvent utiliser la puissance de l’attention pour se différencier de la concurrence, mais aussi comment éviter les pièges d’une sur-saturation qui peut entraîner une perte d’engagement. Un guide essentiel pour les marketeurs, les chefs d’entreprise et tous ceux qui veulent rester compétitifs dans un monde où l’attention est la ressource la plus précieuse. Ce livre vous guide sur la manière d’adapter vos stratégies de marketing pour rester visible et pertinent. En se basant sur les dernières avancées en neurosciences, en psychologie du consommateur, et en data analytics, l’auteur présente des méthodes efficaces pour personnaliser l’expérience client et maximiser l’impact de vos messages publicitaires. Le livre explore également comment les entreprises peuvent bâtir une relation authentique et de long terme avec leurs clients en offrant des expériences qui répondent à leurs besoins et aspirations.L’économie de l’attention ne concerne pas uniquement les marques et leurs campagnes publicitaires, mais aussi la manière dont les entreprises gèrent leur communication interne, leur branding, et l’expérience de leurs employés. Ce livre démontre comment les entreprises peuvent utiliser la puissance de l’attention pour se différencier de la concurrence, mais aussi comment éviter les pièges d’une sur-saturation qui peut entraîner une perte d’engagement. Un guide essentiel pour les marketeurs, les chefs d’entreprise et tous ceux qui veulent rester compétitifs dans un monde où l’attention est la ressource la plus précieuse. Ce livre vous guide sur la manière d’adapter vos stratégies de marketing pour rester visible et pertinent. En se basant sur les dernières avancées en neurosciences, en psychologie du consommateur, et en data analytics, l’auteur présente des méthodes efficaces pour personnaliser l’expérience client et maximiser l’impact de vos messages publicitaires. Le livre explore également comment les entreprises peuvent bâtir une relation authentique et de long terme avec leurs clients en offrant des expériences qui répondent à leurs besoins et aspirations.L’économie de l’attention ne concerne pas uniquement les marques et leurs campagnes publicitaires, mais aussi la manière dont les entreprises gèrent leur communication interne, leur branding, et l’expérience de leurs employés. Ce livre démontre comment les entreprises peuvent utiliser la puissance de l’attention pour se différencier de la concurrence, mais aussi comment éviter les pièges d’une sur-saturation qui peut entraîner une perte d’engagement. Un guide essentiel pour les marketeurs, les chefs d’entreprise et tous ceux qui veulent rester compétitifs dans un monde où l’attention est la ressource la plus précieuse."
     },
     {
-        img: "https://images.pexels.com/photos/28445237/pexels-photo-28445237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "PME",
-        description: "Trouvez la bonne formation, adaptée à votre besoin, votre secteur d'activité et votre métier : Commercial(e) terrain,Key Account Manager (KAM), Directeur(trice)Commercial(e)...",
+        img: img2,
+        title: "Prospection Commerciale",
+        description: "Augmenter son nombre de rendez-vous clients grâce aux meilleures techniques de prospection du moment.",
         rating: 1,
         content: "Dans un monde saturé d'informations et de distractions, capter et conserver l’attention du consommateur est devenu un défi majeur pour les entreprises. Ce livre explore en profondeur l’économie de l’attention, un concept qui devient incontournable dans le marketing digital et la gestion de la relation client. L’auteur y décrit les nouvelles règles du jeu pour capter l’attention dans un environnement numérique saturé, où les consommateurs sont constamment sollicités. Ce livre vous guide sur la manière d’adapter vos stratégies de marketing pour rester visible et pertinent. En se basant sur les dernières avancées en neurosciences, en psychologie du consommateur, et en data analytics, l’auteur présente des méthodes efficaces pour personnaliser l’expérience client et maximiser l’impact de vos messages publicitaires. Le livre explore également comment les entreprises peuvent bâtir une relation authentique et de long terme avec leurs clients en offrant des expériences qui répondent à leurs besoins et aspirations.L’économie de l’attention ne concerne pas uniquement les marques et leurs campagnes publicitaires, mais aussi la manière dont les entreprises gèrent leur communication interne, leur branding, et l’expérience de leurs employés. "
     },
     {
-        img: "https://images.pexels.com/photos/27059631/pexels-photo-27059631/free-photo-of-appartement-concevoir-designer-interieur.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "Start-ups",
-        description: "Trouvez la bonne formation, adaptée à votre besoin, votre secteur d'activité et votre métier : Commercial(e) terrain,Key Account Manager (KAM), Directeur(trice)Commercial(e)...",
+        img: img3,
+        title: "Négociation Commerciale",
+        description: "Négocier avec confiance et savoir défendre ses prix pour préserver sa rentabilité.",
         rating: 5,
         content: "/"
     },
     {
-        img: "https://images.pexels.com/photos/28403269/pexels-photo-28403269/free-photo-of-ville-d-almere.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "Commerciaux",
-        description: "Trouvez la bonne formation, adaptée à votre besoin, votre secteur d'activité et votre métier : Commercial(e) terrain,Key Account Manager (KAM), Directeur(trice)Commercial(e)...",
+        img: img4,
+        title: "Viser 100% Closing",
+        description: "Apprendre à savoir parfaitement conclure une vente et adapter la bonne approche pour faire signer son client à coup sûr.",
         rating: 2,
         content: "/"
     },
     {
-        img: "https://images.pexels.com/photos/9443526/pexels-photo-9443526.jpeg?auto=compress&cs=tinysrgb&w=560&h=560&dpr=1",
-        title: "Grandes entreprises",
-        description: "Trouvez la bonne formation, adaptée à votre besoin, votre secteur d'activité et votre métier : Commercial(e) terrain,Key Account Manager (KAM), Directeur(trice)Commercial(e)...",
+        img: img5,
+        title: "Key Account Management",
+        description: "Apprenez à animer votre réseau et à faire vivre votre portefeuille client pour booster votre taux de signature.",
         rating: 5,
         content: "/"
     },
     {
-        img: "https://images.pexels.com/photos/28445237/pexels-photo-28445237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "PME",
-        description: "Trouvez la bonne formation, adaptée à votre besoin, votre secteur d'activité et votre métier : Commercial(e) terrain,Key Account Manager (KAM), Directeur(trice)Commercial(e)...",
+        img: img6,
+        title: "Vendre sur Linkedin",
+        description: "Faire de Linkedin son canal d’acquisition n°1 et développer son réseau de vente.",
+        rating: 0,
+        content: "/"
+    },
+    {
+        img: img7,
+        title: "Vente Indirecte",
+        description: "Bien animer les réseaux de distribution et aller chercher leur plein potentiel.",
+        rating: 0,
+        content: "/"
+    },
+    {
+        img: img8,
+        title: "Vente à distance",
+        description: "Les fondamentaux du cycle de vente B2B adapté au contexte de vente à distance généralisé.",
+        rating: 0,
+        content: "/"
+    },
+    {
+        img: img9,
+        title: "Coaching Commercial",
+        description: "Améliorez la performance de ses commerciaux grâce à un accompagnement individuel et personnalisé.",
+        rating: 0,
+        content: "/"
+    },
+    {
+        img: img10,
+        title: "Evaluation commerciale",
+        description: "Evaluer le niveau de ses commerciaux grâce à un test de 80 questions et mises en situation de vente.",
         rating: 0,
         content: "/"
     },
