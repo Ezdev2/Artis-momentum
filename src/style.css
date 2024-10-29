@@ -9,7 +9,7 @@
 
   --color-primary: #2B78E4;
   /* --color-primary: #3a3a3a; */
-  --color-secondary: #141414;
+  --color-secondary: #152e3a;
   --color-black: #272d4e;
   --color-blackScale: #717171;
   --color-bgBlack: #191617;
@@ -28,7 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #141414;
+  background-color: #152e3a;
 }
 
 button {
@@ -79,7 +79,7 @@ h4 {
     135deg,
     #2B78E4 0%,
     #8A2BE2 50%,
-    #1E54A7 100%
+    #8cb5f2 100%
   );
   opacity: 0.8; 
   background-clip: text;
