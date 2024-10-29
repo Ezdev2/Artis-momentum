@@ -7,8 +7,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --color-primary: #2B78E4;
-  /* --color-primary: #3a3a3a; */
+  --color-primary: #f37021; /* Updated to a softer orange */
   --color-secondary: #152e3a;
   --color-black: #272d4e;
   --color-blackScale: #717171;
@@ -54,7 +53,6 @@ button:focus {
 #app {
   width: 100%;
   margin: 0 auto;
-  /* text-align: center; */
 }
 
 h1 {
@@ -74,35 +72,42 @@ h4 {
 }
 
 .linearBg {
-  /* background: linear-gradient(85.12deg, #4f12ea -33.54%, #8d1b65 24.17%, #120395 99.96%); */
   background: linear-gradient(
     135deg,
-    #2B78E4 0%,
-    #8A2BE2 50%,
-    #8cb5f2 100%
+    #f37021 0%,    /* Base Orange */
+    #f59e3d 50%,    /* Lighter Orange */
+    #e76c24 100%    /* Darker Orange */
   );
   opacity: 0.8; 
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .linearSecondaryBg {
-  background: linear-gradient(to right, #6EE7B7, #3B82F6);
+  background: linear-gradient(to right, #f59e3d, #f37021); /* Light to Base Orange */
   -webkit-background-clip: text;
   color: transparent;
 }
+
 .linearDark {
-  background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
+  background: linear-gradient(
+    85.12deg,
+    #f37021 -33.54%, /* Base Orange */
+    #d65f20 24.17%,   /* Darker Orange */
+    #b64d1f 99.96%    /* Deep Orange */
+  );
 }
 
 .linear {
   background: linear-gradient(
     135deg,
-    #2B78E4 0%,
-    #8A2BE2 50%,
-    #1E54A7 100%
+    #f37021 0%,    /* Base Orange */
+    #f59e3d 50%,    /* Lighter Orange */
+    #e76c24 100%    /* Darker Orange */
   );
   opacity: 0.8; 
 }
+
 .glassMorphism {
   background: rgba(255, 255, 255, 0.108);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

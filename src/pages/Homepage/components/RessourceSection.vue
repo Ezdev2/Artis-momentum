@@ -1,5 +1,5 @@
 <template>
-    <div class="py-[122px] linearDark flex flex-col gap-6 justify-center items-center w-full">
+    <div class="py-[122px] bg-black flex flex-col gap-6 justify-center items-center w-full">
         <div class="flex flex-col gap-2 w-full px-[24px] sm:px-[122px]">
             <p class="font-bold text-white text-left uppercase">Nos ressources</p>
             <h2 class="font-bold text-left text-white">Vive la vente !</h2>

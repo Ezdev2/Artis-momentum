@@ -18,7 +18,7 @@
                                 :style="{ backgroundImage: 'url(' + item.img + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }">
                             </div>
                             <div>
-                                <h4 class="text-left linearBg font-semibold mb-6 leading-tight">{{ item.title }}</h4>
+                                <h4 class="text-left text-primary font-semibold mb-6 leading-tight">{{ item.title }}</h4>
                                 <p class="text-white text-left desc">{{ item.description }}</p>
                             </div>
                         </div>

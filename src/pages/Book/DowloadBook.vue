@@ -10,7 +10,7 @@
                 {{ databook.description }}
             </p>
             <div class="flex gap-2 flex-col md:flex-row">
-                <button class="flex gap-2 items-center justify-center text-center px-6 py-3.5 linear text-white"
+                <button class="flex gap-2 items-center justify-center text-center px-6 py-3.5 bg-primary text-white"
                     @click="goTo('/cta')">
                     <Icon icon="radix-icons:download" />
                     <span>

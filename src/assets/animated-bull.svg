@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
   <defs>
     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:rgb(100,149,237);stop-opacity:1" />
-      <stop offset="100%" style="stop-color:rgb(70,130,180);stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#f37021;stop-opacity:1" /> <!-- Base Orange -->
+      <stop offset="100%" style="stop-color:#e76c24;stop-opacity:1" /> <!-- Darker Orange -->
     </linearGradient>
     <filter id="blur-filter">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
@@ -15,12 +15,12 @@
       <animate attributeName="stroke-width" values="3;5;3;2;3" dur="10s" repeatCount="indefinite" />
     </circle>
     
-    <circle opacity="0.3"  cx="500" cy="150" r="100" fill="none" stroke="url(#grad1)" stroke-width="2">
+    <circle opacity="0.3" cx="500" cy="150" r="100" fill="none" stroke="url(#grad1)" stroke-width="2">
       <animate attributeName="cx" values="500;480;500;520;500" dur="15s" repeatCount="indefinite" />
       <animate attributeName="stroke-width" values="2;4;2;1;2" dur="11s" repeatCount="indefinite" />
     </circle>
     
-    <circle opacity="0.3"  cx="800" cy="400" r="90" fill="none" stroke="url(#grad1)" stroke-width="4">
+    <circle opacity="0.3" cx="800" cy="400" r="90" fill="none" stroke="url(#grad1)" stroke-width="4">
       <animate attributeName="r" values="90;100;90;80;90" dur="14s" repeatCount="indefinite" />
       <animate attributeName="stroke-width" values="4;6;4;2;4" dur="13s" repeatCount="indefinite" />
     </circle>

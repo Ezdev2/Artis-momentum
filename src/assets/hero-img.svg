@@ -1,8 +1,8 @@
 <svg width="192" height="292" viewBox="0 0 192 292" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#45389e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#6c5ce7;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#f37021; stop-opacity:1" /> <!-- Base Orange -->
+      <stop offset="100%" style="stop-color:#e76c24; stop-opacity:1" /> <!-- Darker Orange -->
     </linearGradient>
     <filter id="glow">
       <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
@@ -23,13 +23,13 @@
     </path>
     
     <g filter="url(#glow)">
-      <path opacity="0.3" d="M140 2C156.667 18.6667 173.333 18.6667 190 2" stroke="#3498db" stroke-width="2">
+      <path opacity="0.3" d="M140 2C156.667 18.6667 173.333 18.6667 190 2" stroke="#f37021" stroke-width="2"> <!-- Updated stroke color -->
         <animate attributeName="d" values="M140 2C156.667 18.6667 173.333 18.6667 190 2; M140 12C156.667 28.6667 173.333 28.6667 190 12; M140 2C156.667 18.6667 173.333 18.6667 190 2" dur="4s" repeatCount="indefinite" />
       </path>
-      <path opacity="0.3" d="M140 22C156.667 38.6667 173.333 38.6667 190 22" stroke="#9b59b6" stroke-width="2">
+      <path opacity="0.3" d="M140 22C156.667 38.6667 173.333 38.6667 190 22" stroke="#f59e3d" stroke-width="2"> <!-- Updated stroke color -->
         <animate attributeName="d" values="M140 22C156.667 38.6667 173.333 38.6667 190 22; M140 32C156.667 48.6667 173.333 48.6667 190 32; M140 22C156.667 38.6667 173.333 38.6667 190 22" dur="4s" repeatCount="indefinite" />
       </path>
-      <path opacity="0.3" d="M140 42C156.667 58.6667 173.333 58.6667 190 42" stroke="#3498db" stroke-width="2">
+      <path opacity="0.3" d="M140 42C156.667 58.6667 173.333 58.6667 190 42" stroke="#f37021" stroke-width="2"> <!-- Updated stroke color -->
         <animate attributeName="d" values="M140 42C156.667 58.6667 173.333 58.6667 190 42; M140 52C156.667 68.6667 173.333 68.6667 190 52; M140 42C156.667 58.6667 173.333 58.6667 190 42" dur="4s" repeatCount="indefinite" />
       </path>
     </g>

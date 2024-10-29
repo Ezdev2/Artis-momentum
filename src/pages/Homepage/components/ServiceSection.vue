@@ -1,5 +1,5 @@
 <template>
-    <div class="sm:py-[122px] p-[24px] sm:px-[122px] flex flex-col gap-6 justify-center">
+    <div class="sm:py-[122px] p-[24px] sm:px-[122px] flex flex-col gap-6 justify-center bg-black">
         <div class="flex flex-col gap-2">
             <p class="font-bold text-blackScale text-left uppercase">Découvrez notre approche pédagogique
             </p>
@@ -14,7 +14,7 @@
                 <div class="flex flex-col gap-8">
                     <h4 class="text-left font-semibold mb-6 leading-tight">{{ item.title }}</h4>
                     <button
-                        class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white linearDark hover:bg-secondary"
+                        class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white glassMorphism hover:bg-secondary"
                         @click="goTo(item.link)">
                         <span>Découvrir</span>
                         <img width="12" src="../../../assets/arrow.svg" alt="">
@@ -74,7 +74,7 @@ function goTo(link) {
     left: -3px;
     right: -3px;
     bottom: -3px;
-    background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
+    background: linear-gradient(85.12deg, #FF6F20 -33.54%, #C75B00 24.17%, #8A3B00 99.96%);
     z-index: -1;
     border-radius: inherit;
 }

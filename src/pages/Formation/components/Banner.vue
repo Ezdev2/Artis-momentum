@@ -40,7 +40,7 @@ function showDetail() {
     left: -3px;
     right: -3px;
     bottom: -3px;
-    background: linear-gradient(85.12deg, #61285b -33.54%, #251e51 24.17%, #021a70 99.96%);
+    background: linear-gradient(85.12deg, #FF6F20 -33.54%, #C75B00 24.17%, #8A3B00 99.96%);
     z-index: -1;
     border-radius: 16px;
 }
