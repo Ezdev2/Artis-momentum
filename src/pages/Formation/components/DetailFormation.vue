@@ -46,7 +46,7 @@
             <div class="flex gap-4">
                 <div>
                     <button class="flex gap-2 items-center justify-center text-center px-4 py-2 bg-primary text-white"
-                        @click="openFormation('/formation-' + data.slug + '.pdf')">
+                        @click="openFormation(data.slug)">
                         <Icon icon="radix-icons:archive" />
                         <span class="hidden lg:block">
                             Voir la formation
@@ -82,11 +82,20 @@
                     </div>
                     <button
                         class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white linear hover:bg-secondary"
-                        @click="goTo(item.link + item.slug + '.pdf')">
+                        @click="openFormation(data.slug)">
                         <span>Voir la formation</span>
                     </button>
                 </div>
             </div>
+            
+        </div>
+        <div>
+            <button class="flex gap-2 items-center justify-center text-center px-4 py-2 bg-transparent text-primary border border-primary"
+                @click="goToFormations">
+                <Icon icon="radix-icons:arrow-right" />
+                <span class="hidden lg:block">Voir toutes nos formations ici
+                </span>
+            </button>
         </div>
     </div>
     
@@ -129,9 +138,16 @@ function goTo(link) {
     window.open(link, '_blank');
 }
 
+/*
 const openFormation = (link) => {
     window.open(link, '_blank');
 }
+*/
+
+const openFormation = (slug) => {
+    const pptxLink = `https://docs.google.com/gview?url=http://localhost:5173/formation-${slug}.pptx&embedded=true`;
+    window.open(pptxLink, '_blank');
+};
 
 const goToFormations = () => {
     window.location.href="/formation";
