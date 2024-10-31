@@ -2,30 +2,29 @@
     <div class="w-full p-6 bg-gray-800 rounded-lg shadow-lg form-bg">
         <h3 class="text-xl text-white font-semibold mb-4">Veuillez compléter ce formulaire</h3>
 
-        <!-- Static Form -->
         <form @submit.prevent="submitForm">
-            <!-- Name field -->
+            <!-- Champ de nom -->
             <div class="mb-4">
                 <label for="name" class="text-white block">Nom complet</label>
                 <input id="name" type="text" v-model="formData.name" placeholder="Votre nom" required
                     class="w-full p-2 mt-2 bg-gray-700 text-white rounded border border-gray-600" />
             </div>
 
-            <!-- Email field -->
+            <!-- Champ d'email -->
             <div class="mb-4">
                 <label for="email" class="text-white block">Adresse e-mail</label>
                 <input id="email" type="email" v-model="formData.email" placeholder="Votre e-mail" required
                     class="w-full p-2 mt-2 bg-gray-700 text-white rounded border border-gray-600" />
             </div>
 
-            <!-- Message field -->
+            <!-- Champ de message -->
             <div class="mb-4">
                 <label for="message" class="text-white block">Message</label>
                 <textarea id="message" v-model="formData.message" rows="4" placeholder="Votre message" required
                     class="w-full p-2 mt-2 bg-gray-700 text-white rounded border border-gray-600"></textarea>
             </div>
 
-            <!-- Submit button -->
+            <!-- Bouton d'envoi -->
             <div class="flex justify-end">
                 <button type="submit" class="linearDark text-white py-2 px-6 rounded hover:bg-secondary transition">
                     Envoyer
@@ -33,9 +32,12 @@
             </div>
         </form>
 
-        <!-- Confirmation message after submission -->
+        <!-- Message de confirmation après soumission -->
         <div v-if="submitted" class="mt-4 text-center text-green-600 p-2 rounded">
             Merci pour votre message !
+        </div>
+        <div v-if="error" class="mt-4 text-center text-red-600 p-2 rounded">
+            Une erreur s'est produite lors de l'envoi.
         </div>
     </div>
 </template>
@@ -50,25 +52,46 @@ const formData = ref({
 });
 
 const submitted = ref(false);
+const error = ref(false);
 
-function submitForm() {
-    // Here, you could submit the form data to a server or API
-    console.log('Form submitted:', formData.value);
+async function submitForm() {
+    submitted.value = false;
+    error.value = false;
 
-    // Simulate a successful form submission
-    submitted.value = true;
+    // Objet FormData pour l'envoi
+    const formPayload = new FormData();
+    formPayload.append('name', formData.value.name);
+    formPayload.append('email', formData.value.email);
+    formPayload.append('message', formData.value.message);
 
-    // Reset form fields
-    formData.value = {
-        name: '',
-        email: '',
-        message: ''
-    };
+    try {
+        const response = await fetch('https://formspree.io/f/xqakppvg', {
+            method: 'POST',
+            body: formPayload,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            submitted.value = true;
+            // Réinitialiser les champs du formulaire
+            formData.value = {
+                name: '',
+                email: '',
+                message: ''
+            };
+        } else {
+            error.value = true;
+        }
+    } catch (e) {
+        error.value = true;
+    }
 }
 </script>
 
 <style scoped>
-/* Style for the form */
+
 input,
 textarea {
     border: 1px solid #444;
@@ -77,12 +100,10 @@ textarea {
 
 button {
     background-color: #4CAF50;
-    /* primary color */
 }
 
 button:hover {
     background-color: #45a049;
-    /* secondary hover color */
 }
 
 input:focus,
