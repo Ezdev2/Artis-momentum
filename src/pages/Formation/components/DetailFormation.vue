@@ -82,7 +82,7 @@
                     </div>
                     <button
                         class="flex gap-4 justify-center items-center text-center px-6 py-3.5 text-white linear hover:bg-secondary"
-                        @click="openFormation(data.slug)">
+                        @click="openFormation(item.slug)">
                         <span>Voir la formation</span>
                     </button>
                 </div>
