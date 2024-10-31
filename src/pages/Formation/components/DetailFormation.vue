@@ -145,7 +145,7 @@ const openFormation = (link) => {
 */
 
 const openFormation = (slug) => {
-    const pptxLink = `https://docs.google.com/gview?url=http://localhost:5173/formation-${slug}.pptx&embedded=true`;
+    const pptxLink = `https://docs.google.com/gview?url=https://artis-momentum.netlify.app/formation-${slug}.pptx&embedded=true`;
     window.open(pptxLink, '_blank');
 };
 
