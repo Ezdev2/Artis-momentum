@@ -6,7 +6,7 @@
                     src="https://images.pexels.com/photos/3280211/pexels-photo-3280211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     alt="">
                 <div>
-                    <h2 class="font-bold text-left text-white">Merci d'avoir téléchargé notre programme de formation! <br>
+                    <h2 class="font-bold text-left text-white">Merci d'avoir téléchargé notre programme! <br>
                     </h2>
                     <p class="text-blackScale text-left">
                         Si votre téléchargement ne démarre pas automatiquement, <a :href="'/formation-' + dataInfo.slug + '.pdf'" target="_blank"
@@ -17,7 +17,7 @@
                             @click="goTo('/formation')">
                             <Icon icon="radix-icons:arrow-left" />
                             <span class="hidden lg:block">
-                                    Revenir à la liste des formations
+                                    Voir toutes nos formations
                             </span>
                         </button>
                     </div>
@@ -26,7 +26,7 @@
             <Form />
         </div>
         <hr class="text-blackScale">
-        <h3 class="font-bold text-left text-white">Ces formations peuvent aussi vous intéresser : <br>
+        <h3 class="font-bold text-left text-white">Quelques-unes de nos formations qui peuvent aussi vous intéresser : <br>
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="service-card flex flex-col gap-4 bg-white rounded-lg p-6 transition-all hover:bg-gray-700 hover:shadow-lg"
