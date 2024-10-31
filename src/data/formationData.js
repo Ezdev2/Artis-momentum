@@ -49,18 +49,6 @@ export const formationData = [
         link: "/formation-"
     },
     {
-        title: "Accompagnement Commercial",
-        description: "Optimisez la performance de vos commerciaux grâce à un accompagnement individuel et sur mesure.",
-        slug: "accompagnement-commercial",
-        link: "/formation-"
-    },
-    {
-        title: "Évaluation des Performances Commerciales",
-        description: "Évaluer les compétences de ses commerciaux à l'aide d'un test de 80 questions et de mises en situation de vente.",
-        slug: "evaluation-des-performances-commerciales",
-        link: "/formation-"
-    },
-    {
         title: "De la Relation client à la conclusion de vente",
         description: "Développez vos compétences commerciales avec un expert en vente. Nos 50 formateurs proposent une approche pédagogique innovante axée sur la pratique, destinée aux assistants des ventes et aux CSM. Disponibles dans toute la France et adaptés à tous les niveaux.",
         slug: "de-la-relation-client-a-la-conclusion-de-vente",
